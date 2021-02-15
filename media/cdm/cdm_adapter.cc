@@ -298,16 +298,17 @@ void CdmAdapter::SetServerCertificate(
   DCHECK(task_runner_->BelongsToCurrentThread());
   TRACE_EVENT0("media", "CdmAdapter::SetServerCertificate");
 
-  if (certificate.size() < limits::kMinCertificateLength ||
-      certificate.size() > limits::kMaxCertificateLength) {
-    promise->reject(CdmPromise::Exception::TYPE_ERROR, 0,
-                    "Incorrect certificate.");
-    return;
-  }
+  // if (certificate.size() < limits::kMinCertificateLength ||
+  //     certificate.size() > limits::kMaxCertificateLength) {
+  //   promise->reject(CdmPromise::Exception::TYPE_ERROR, 0,
+  //                   "Incorrect certificate.");
+  //   return;
+  // }
 
   uint32_t promise_id = cdm_promise_adapter_.SavePromise(std::move(promise));
-  cdm_->SetServerCertificate(promise_id, certificate.data(),
-                             certificate.size());
+  cdm_promise_adapter_.ResolvePromise(promise_id);
+  // cdm_->SetServerCertificate(promise_id, certificate.data(),
+  //                            certificate.size());
 }
 
 void CdmAdapter::GetStatusForPolicy(

@@ -69,9 +69,47 @@ void CdmSessionAdapter::SetServerCertificate(
   cdm_->SetServerCertificate(certificate, std::move(promise));
 }
 
+std::string HdcpVerToString(HdcpVersion hdcp_version) {
+  std::string hdcp_version_str;
+  switch (hdcp_version) {
+  case HdcpVersion::kHdcpVersion1_0:
+    hdcp_version_str = "kHdcpVersion1_0";
+    break;
+  case HdcpVersion::kHdcpVersion1_1:
+    hdcp_version_str = "kHdcpVersion1_1";
+    break;
+  case HdcpVersion::kHdcpVersion1_2:
+    hdcp_version_str = "kHdcpVersion1_2";
+    break;
+  case HdcpVersion::kHdcpVersion1_3:
+    hdcp_version_str = "kHdcpVersion1_3";
+    break;
+  case HdcpVersion::kHdcpVersion1_4:
+    hdcp_version_str = "kHdcpVersion1_4";
+    break;
+  case HdcpVersion::kHdcpVersion2_0:
+    hdcp_version_str = "kHdcpVersion2_0";
+    break;
+  case HdcpVersion::kHdcpVersion2_1:
+    hdcp_version_str = "kHdcpVersion2_1";
+    break;
+  case HdcpVersion::kHdcpVersion2_2:
+    hdcp_version_str = "kHdcpVersion2_2";
+    break;
+  case HdcpVersion::kHdcpVersion2_3:
+    hdcp_version_str = "kHdcpVersion2_3";
+    break;
+  case HdcpVersion::kHdcpVersionNone:
+    hdcp_version_str = "kHdcpVersionNone";
+    break;
+  }
+  return hdcp_version_str;
+}
+
 void CdmSessionAdapter::GetStatusForPolicy(
     HdcpVersion min_hdcp_version,
     std::unique_ptr<KeyStatusCdmPromise> promise) {
+  DVLOG(2) << __func__ << ": min_hdcp_version = " << HdcpVerToString(min_hdcp_version);
   cdm_->GetStatusForPolicy(min_hdcp_version, std::move(promise));
 }
 

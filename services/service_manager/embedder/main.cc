@@ -405,19 +405,23 @@ int Main(const MainParams& params) {
   }
   switch (process_type) {
     case ProcessType::kDefault:
+      LOG(INFO) << "ProcessType::kDefault";
       NOTREACHED();
       break;
 
     case ProcessType::kServiceManager:
+      LOG(INFO) << "ProcessType::kServiceManager";
       exit_code = RunServiceManager(delegate);
       break;
 
     case ProcessType::kService:
+      LOG(INFO) << "ProcessType::kService";
       CommonSubprocessInit();
       exit_code = RunService(delegate);
       break;
 
     case ProcessType::kEmbedder:
+      LOG(INFO) << "ProcessType::kEmbedder";
       if (delegate->IsEmbedderSubprocess())
         CommonSubprocessInit();
       exit_code = delegate->RunEmbedderProcess();

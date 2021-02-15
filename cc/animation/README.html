@@ -1,0 +1,531 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="ccanimation">cc/animation</h1>
+
+<ul>
+<li><a href="#ccanimation">cc/animation</a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#ccanimation-terminology">cc/animation terminology</a>
+<ul>
+<li><a href="#types-of-animation-curve">Types of Animation Curve</a></li>
+<li><a href="#animation-timelines">Animation Timelines</a></li>
+<li><a href="#mainimpl-threads">Main/Impl Threads</a></li>
+</ul>
+</li>
+<li><a href="#current-ccanimation-clients">Current cc/animation Clients</a>
+<ul>
+<li><a href="#supported-animatable-properties">Supported Animatable Properties</a></li>
+<li><a href="#interaction-between-ccanimation-and-blink">Interaction between cc/animation and Blink</a></li>
+<li><a href="#interaction-between-ccanimation-and-ui">Interaction between cc/animation and ui/</a></li>
+</ul>
+</li>
+<li><a href="#additional-references">Additional References</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="overview">Overview</h2>
+
+<p>cc/animation provides animation support - generating output values (usually<br>
+visual properties) based on a predefined function and changing input values.<br>
+Currently the main clients of cc/animation are Blink and ui/, targeting<br>
+composited layers, but the code is intended to be agnostic of the client it is<br>
+supporting. Aspirationally we could eventually merge cc/animation and Blink<br>
+animation and have only a single animation system for all of Chromium.</p>
+<p>This document covers two main topics. The first section explains how<br>
+cc/animation actually works: how animations are ticked, what animation curves<br>
+are, what the ownership model is, etc. Later sections document how other parts<br>
+of Chromium interact with cc/animation, most prominently Blink and ui/.</p>
+<h2 class="mume-header" id="ccanimation-terminology">cc/animation terminology</h2>
+
+<p><a href="https://cs.chromium.org/chromium/src/cc/animation/animation.h">Animation</a><br>
+A cc::Animation is responsible for managing animating properties for a set of<br>
+targets. Each target is represented by a [KeyframeEffect][] and can be animating<br>
+multiple properties on that target; see KeyframeEffect below.</p>
+<p>A particular Animation may not own all the KeyframeEffects for a given<br>
+target. Animation is only a grouping mechanism for related effects, and the<br>
+grouping relationship is defined by the client. It is also the client&apos;s<br>
+responsibility to deal with any conflicts that arise from animating the same<br>
+property of the same target across multiple Animations.</p>
+<p>Each Animation has a copy on the impl thread, and will take care of<br>
+synchronizing to/from the impl thread when requested.</p>
+<p><a href="https://cs.chromium.org/chromium/src/cc/animation/single_keyframe_effect_animation.h">SingleKeyframeEffectAnimation</a><br>
+It is a sub-class of Animation that serves as a bridge between the cc animation<br>
+clients and cc because currently only a single keyframe effect per animation is<br>
+supported.</p>
+<p>There is a 1:1 relationship between SingleKeyframeEffectAnimation and<br>
+the KeyframeEffect.</p>
+<blockquote>
+<p>NOTE: SingleKeyframeEffectAnimation is being deprecated.</p>
+</blockquote>
+<p><a href="https://codesearch.chromium.org/chromium/src/cc/animation/keyframe_model.h">Keyframe model</a><br>
+KeyframeModels contain the state necessary to &apos;play&apos; (interpolate values from) an</p>
+<p><a href="https://codesearch.chromium.org/chromium/src/cc/animation/animation_curve.h">animation curve</a>,<br>
+which is a function that returns a value given an input time. Aside from the<br>
+animation curve itself, a keyframe model&apos;s state includes the run state (playing,<br>
+paused, etc), the start time, the current direction (forwards, reverse), etc.<br>
+An animation does not know or care what property is being animated, and holds<br>
+only an opaque identifier for the property to allow clients to map output values<br>
+to the correct properties.</p>
+<p>[Keyframe effect][]<br>
+A KeyframeEffect owns a group of KeyframeModels for a single target (identified<br>
+by [PropertyToElementIdMap][]). It is responsible for managing the KeyframeModels&apos;<br>
+running states (starting, running, paused, etc), as well as ticking the<br>
+KeyframeModels when it is requested to produce new outputs for a given time.</p>
+<p>Note that a single KeyframeEffect may not own all the KeyframeModels for a<br>
+given target. KeyframeEffect is only a grouping mechanism for related<br>
+KeyframeModels. The commonality between keyframe models on the same target is<br>
+found via ElementAnimations - there is only one ElementAnimations for a given<br>
+target.</p>
+<p>Group:<br>
+KeyframeModels that must be run together are called &apos;grouped&apos; and have the same<br>
+group id. Grouped KeyframeModels are guaranteed to start at the same time and no<br>
+other KeyframeModels may animate any of the group&apos;s target properties until all<br>
+KeyframeModels in the group have finished animating. It&apos;s also guaranteed that<br>
+no two keyframe models within a keyframe effect that have both the same group id<br>
+and property id.</p>
+<p>In general, KeyframeModels are grouped together based on their<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/animation_target.h">animation target</a><br>
+(the entity whose property is being animated) and each such group is owned by an<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/animation.h">animation</a>.<br>
+Note that there may be multiple animations with the same target (each<br>
+with a set of KeyframeModels for that target); the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/element_animations.h">ElementAnimations</a><br>
+class wraps the multiple animations and has a 1:1 relationship with<br>
+target entities.</p>
+<p><code>TODO(smcgruer): Why are ElementAnimations and Animations separate?</code></p>
+<p>In order to play an animation, input time values must be provided to the<br>
+animation curve and output values fed back into the animating entity. This is<br>
+called &apos;ticking&apos; an animation and is the responsibility of the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/animation_host.h">animation host</a>.<br>
+The animation host has a list of currently ticking animations (i.e. those that have<br>
+any non-deleted animations), which it iterates through whenever it receives a<br>
+tick call from the client (along with a corresponding input time).  The<br>
+animations then call into their non-deleted animations, retrieving the<br>
+value from the animation curve.  As they are computed, output values are sent to<br>
+the target which is responsible for passing them to the client entity that is<br>
+being animated.</p>
+<h3 class="mume-header" id="types-of-animation-curve">Types of Animation Curve</h3>
+
+<p>As noted above, an animation curve is simply a function which converts an input<br>
+time value into some output value. Animation curves are categorized based on<br>
+their output type, and each such category can have multiple implementations that<br>
+provide different conversion functions. There are many categories of animation<br>
+curve, but some common ones are <code>FloatAnimationCurve</code>, <code>ColorAnimationCurve</code>,<br>
+and <code>TransformAnimationCurve</code>.</p>
+<p>The most common implementation of the various animation curve categories are the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/keyframed_animation_curve.h">keyframed animation curves</a>.<br>
+These curves each have a set of keyframes which map a specific time to a<br>
+specific output value. Producing an output value for a given input time is then<br>
+a matter of identifying the two keyframes the time lies between, and<br>
+interpolating between the keyframe output values. (Or simply using a keyframe<br>
+output value directly, if the input time happens to line up exactly.) Exact<br>
+details of how each animation curve category is interpolated can be found in the<br>
+implementations.</p>
+<p>There is one category of animation curve that stands somewhat apart, the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/scroll_offset_animation_curve.h">scroll offset animation curve</a>.<br>
+This curve converts the input time into a scroll offset, interpolating between<br>
+an initial scroll offset and an updateable target scroll offset. It has logic to<br>
+handle different types of scrolling such as programmatic, keyboard, and mouse<br>
+wheel scrolls.</p>
+<h3 class="mume-header" id="animation-timelines">Animation Timelines</h3>
+
+<p>cc/animation has a concept of an<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/animation/animation_timeline.h">animation timeline</a>.<br>
+This should not be confused with the identically named Blink concept. In<br>
+cc/animation, animation timelines are an implementation detail - they hold the<br>
+animations and are responsible for syncing them to the impl thread (see<br>
+below), but do not participate in the ticking process in any way.</p>
+<h3 class="mume-header" id="mainimpl-threads">Main/Impl Threads</h3>
+
+<p>One part of cc/animation that is not client agnostic is its support for the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/README.md">Chromium compositor thread</a>.<br>
+Most of the cc/animation classes have a <code>PushPropertiesTo</code> method, in which they<br>
+synchronize necessary state from the main thread to the impl thread. It is<br>
+feasible that such support could be abstracted if necessary, but so far it has<br>
+not been required.</p>
+<h2 class="mume-header" id="current-ccanimation-clients">Current cc/animation Clients</h2>
+
+<p>As noted above, the main clients of cc/animation are currently Blink for<br>
+accelerated web animations, and ui/ for accelerated user interface animations.<br>
+Both of these clients utilize<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/layers/layer.h">cc::Layer</a><br>
+as their animation entity and interact with cc/animation via the<br>
+<a href="https://codesearch.chromium.org/chromium/src/cc/trees/mutator_host_client.h">MutatorHostClient</a><br>
+interface (which is implemented by cc::LayerTreeHost and cc::LayerTreeHostImpl).<br>
+Recently a third client, chrome/browser/vr/, has started using cc/animations as<br>
+well. The vr/ client does not use cc::Layer as its animation entity.</p>
+<p><code>TODO(smcgruer): Summarize how vr/ uses cc/animation.</code></p>
+<h3 class="mume-header" id="supported-animatable-properties">Supported Animatable Properties</h3>
+
+<p>As cc::Layers are just textures which are reused for performance, clients that<br>
+use composited layers as their animation entities are limited to animating<br>
+properties that do not cause content to be redrawn. For example, a composited<br>
+layer&apos;s opacity can be animated as promoted layers are aware of the content<br>
+behind them.  On the other hand we cannot animate layer width as changing the<br>
+width could modify layout - which then requires redrawing.</p>
+<h3 class="mume-header" id="interaction-between-ccanimation-and-blink">Interaction between cc/animation and Blink</h3>
+
+<p>Blink is able to move compatible animations off the main thread by promoting<br>
+the animating element into a layer. The Blink<br>
+<a href="../../third_party/blink/renderer/core/animation/README.md#lifetime-of-a-compositor-animation">Lifetime of a compositor animation</a><br>
+document describes how composited animations are created in blink. Once a<br>
+compositor animation is created it is pushed through the commit cycle.</p>
+<p><img src="images/new-animation.png" alt="new animation"></p>
+<p>The lifetime of a newly started cc::Animation is roughly the following:</p>
+<ol>
+<li>An update to style or a new animation triggers a new <a href="https://cs.chromium.org/chromium/src/cc/trees/proxy_main.cc?type=cs&amp;q=file:proxy_main%5C.cc+RequestMainFrameUpdate">BeginMainFrame</a> via<br>
+<a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/frame/local_frame.cc?type=cs&amp;q=file:local_frame%5C.cc+ScheduleVisualUpdate">ScheduleVisualUpdate</a>.</li>
+<li><a href="https://cs.chromium.org/search?q=function:blink::DocumentAnimations::UpdateAnimations+GetPendingAnimations">blink::DocumentAnimations::UpdateAnimations</a> calls [blink::Animation::PreCommit][]<br>
+on each pending blink::Animation constructing the corresponding<br>
+cc::Animation via [blink::Animation::CreateCompositorAnimation][] (attaching<br>
+the animation to the cc::AnimationTimeline resulting in it being later pushed).<br>
+The KeyframeEffects are constructed via [blink::Animation::StartAnimationOnCompositor][].</li>
+<li>[AnimationHost::RegisterKeyframeEffectForElement][] creates a<br>
+cc::ElementAnimations for the target <code>element_id</code> if one does not already<br>
+exist. This ElementAnimations instance is shared by all animations with<br>
+the same target and tracks the existence of the target.</li>
+<li>During the commit, [cc::ElementAnimations::ElementRegistered][] is called on the<br>
+main thread&apos;s AnimationHost either:
+<ul>
+<li>Before BlinkGenPropertyTrees, when a layer with the target <code>element_id</code> is<br>
+registered.</li>
+<li>After BlinkGenPropertyTrees, after a property tree node with the target<br>
+<code>element_id</code> is created on the main thread LayerTreeHost&apos;s <code>property_trees_</code>.<br>
+This begins ticking the attached KeyframeEffects and tracks that the element<br>
+exists in the active layer / property tree.</li>
+</ul>
+</li>
+<li>[cc::LayerTreeHost::FinishCommitOnImplThread][] calls<br>
+[cc::AnimationHost::PushPropertiesTo][] which results in<br>
+[cc::AnimationTimeline::PushAttachedAnimationsToImplThread][] creating a<br>
+cc::Animation on the compositor thread&apos;s AnimationTimeline for each animation<br>
+missing from the compositor thread.</li>
+<li>[cc::Animation::PushPropertiesTo][] is called on every animation on the timeline.<br>
+When the <code>element_id</code> is pushed by [cc::KeyframeEffect::PushPropertiesTo][]<br>
+[cc::Animation::AttachElementForKeyframeEffect][] creates a compositor side<br>
+cc::ElementAnimations instance to track the existence of the element on the<br>
+compositor. Since animations are pushed after the layer and property trees,<br>
+the element should already exist on the pending tree. This will result in the<br>
+animation being added to the ticking animations list.</li>
+<li>Now the animation is ticking, meaning that [cc::Animation::Tick][] will be called<br>
+every frame and update the pending property tree nodes.</li>
+<li>When the pending tree is activated,<br>
+[cc::AnimationHost::ActivateAnimations][] updates the keyframe effects and<br>
+[cc::ElementAnimations::ElementRegistered][]<br>
+is called for the newly added element id on the active tree, setting<br>
+<code>has_element_in_active_list_</code>.</li>
+<li>Subsequent animation ticks will now update the property nodes on the active<br>
+tree.</li>
+</ol>
+<p>[blink::Animation::PreCommit]: <a href="https://cs.chromium.org/search?q=function:blink::PendingAnimations::Update+%5C-%5C">https://cs.chromium.org/search?q=function:blink::PendingAnimations::Update+\-\</a>&gt;PreCommit%5C(&amp;g=0&amp;l=57<br>
+[blink::Animation::CreateCompositorAnimation]: <a href="https://cs.chromium.org/search?q=function:blink::Animation::CreateCompositorAnimation+%5E%5B+%5D*AttachCompositorTimeline">https://cs.chromium.org/search?q=function:blink::Animation::CreateCompositorAnimation+^[+]*AttachCompositorTimeline</a><br>
+[blink::Animation::StartAnimationOnCompositor]: <a href="https://cs.chromium.org/search?q=function:blink::Animation::StartAnimationOnCompositor+%5C-%5C">https://cs.chromium.org/search?q=function:blink::Animation::StartAnimationOnCompositor+\-\</a>&gt;StartAnimationOnCompositor<br>
+[AnimationHost::RegisterKeyframeEffectForElement]: <a href="https://cs.chromium.org/search?q=function:cc::AnimationHost::RegisterKeyframeEffectForElement+ElementAnimations::Create">https://cs.chromium.org/search?q=function:cc::AnimationHost::RegisterKeyframeEffectForElement+ElementAnimations::Create</a><br>
+[cc::ElementAnimations::ElementRegistered]: <a href="https://cs.chromium.org/search?q=function:cc::ElementAnimations::ElementRegistered+%5C!has_element_in_any_list">https://cs.chromium.org/search?q=function:cc::ElementAnimations::ElementRegistered+\!has_element_in_any_list</a><br>
+[cc::LayerTreeHost::FinishCommitOnImplThread]: <a href="https://cs.chromium.org/search?q=cc::LayerTreeHost::FinishCommitOnImplThread+file:%5C.cc">https://cs.chromium.org/search?q=cc::LayerTreeHost::FinishCommitOnImplThread+file:\.cc</a><br>
+[cc::AnimationHost::PushPropertiesTo]: <a href="https://cs.chromium.org/search/?q=function:cc::LayerTreeHost::FinishCommitOnImplThread+%5C-%5C">https://cs.chromium.org/search/?q=function:cc::LayerTreeHost::FinishCommitOnImplThread+\-\</a>&gt;PushPropertiesTo<br>
+[cc::AnimationTimeline::PushAttachedAnimationsToImplThread]: <a href="https://cs.chromium.org/search?q=function:cc::AnimationTimeline::PushAttachedAnimationsToImplThread+animation%5C-%5C">https://cs.chromium.org/search?q=function:cc::AnimationTimeline::PushAttachedAnimationsToImplThread+animation\-\</a>&gt;CreateImplInstance<br>
+[cc::Animation::PushPropertiesTo]: <a href="https://cs.chromium.org/search?q=cc::Animation::PushPropertiesTo+file:%5C.cc">https://cs.chromium.org/search?q=cc::Animation::PushPropertiesTo+file:\.cc</a><br>
+[cc::KeyframeEffect::PushPropertiesTo]: <a href="https://cs.chromium.org/search?q=cc::KeyframeEffect::PushPropertiesTo+file:%5C.cc">https://cs.chromium.org/search?q=cc::KeyframeEffect::PushPropertiesTo+file:\.cc</a><br>
+[cc::Animation::AttachElementForKeyframeEffect]: <a href="https://cs.chromium.org/search?q=cc::Animation::AttachElementForKeyframeEffect+file:%5C.cc">https://cs.chromium.org/search?q=cc::Animation::AttachElementForKeyframeEffect+file:\.cc</a><br>
+[cc::Animation::Tick]: <a href="https://cs.chromium.org/search?q=cc::Animation::Tick+file:%5C.cc">https://cs.chromium.org/search?q=cc::Animation::Tick+file:\.cc</a><br>
+[cc::AnimationHost::ActivateAnimations]: <a href="https://cs.chromium.org/search?q=cc::AnimationHost::ActivateAnimations+ActivateKeyframeEffects">https://cs.chromium.org/search?q=cc::AnimationHost::ActivateAnimations+ActivateKeyframeEffects</a><br>
+[cc::ElementAnimations::ElementRegistered]: <a href="https://cs.chromium.org/search?q=cc::ElementAnimations::ElementRegistered+file:%5C.cc">https://cs.chromium.org/search?q=cc::ElementAnimations::ElementRegistered+file:\.cc</a><br>
+[KeyframeEffect]: <a href="https://cs.chromium.org/chromium/src/cc/animation/keyframe_effect.h">https://cs.chromium.org/chromium/src/cc/animation/keyframe_effect.h</a><br>
+[PropertyToElementIdMap]: <a href="https://cs.chromium.org/chromium/src/cc/trees/target_property.h?type=cs&amp;g=0&amp;l=42">https://cs.chromium.org/chromium/src/cc/trees/target_property.h?type=cs&amp;g=0&amp;l=42</a></p>
+<p><code>TODO(flackr): Document finishing / cancel / abort.</code></p>
+<h3 class="mume-header" id="interaction-between-ccanimation-and-ui">Interaction between cc/animation and ui/</h3>
+
+<p><code>TODO(smcgruer): Write this.</code></p>
+<h2 class="mume-header" id="additional-references">Additional References</h2>
+
+<p>The Compositor Property Trees talk <a href="https://goo.gl/U4wXpW">slides</a><br>
+includes discussion on compositor animations.</p>
+<p>The Project Heaviside <a href="https://goo.gl/pWaWyv">design document</a><br>
+and <a href="https://goo.gl/iFpk4R">slides</a> provide history on the Chromium<br>
+and Blink animation system. The slides in particular include helpful<br>
+software architecture diagrams.</p>
+<p>Smooth scrolling is implemented via animations. See also references to<br>
+&quot;scroll offset&quot; animations in the cc code<br>
+base. <a href="https://goo.gl/XXwAwk">Smooth Scrolling in Chromium</a> provides<br>
+an overview of smooth scrolling. There is further class header<br>
+documentation in<br>
+Blink&apos;s<br>
+<a href="https://codesearch.chromium.org/chromium/src/third_party/blink/renderer/platform/scroll/">platform/scroll</a><br>
+directory.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
