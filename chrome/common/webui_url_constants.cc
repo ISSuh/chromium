@@ -167,6 +167,9 @@ const char kChromeUIWebFooterExperimentURL[] =
 const char kChromeUIWelcomeHost[] = "welcome";
 const char kChromeUIWelcomeURL[] = "chrome://welcome/";
 
+const char kLocalMediaPlayerHost[] = "local-media-player";
+const char kLocalMediaPlayerURL[] = "chrome://local-media-player/";
+
 #if defined(OS_WIN)
 // TODO(crbug.com/1003960): Remove when issue is resolved.
 const char kChromeUIWelcomeWin10Host[] = "welcome-win10";
@@ -624,6 +627,8 @@ const char* const kChromeHostURLs[] = {
     kChromeUIDevicesHost,
 #endif
     kChromeUIWebRtcLogsHost,
+
+    kLocalMediaPlayerHost,
 };
 const size_t kNumberOfChromeHostURLs = base::size(kChromeHostURLs);
 

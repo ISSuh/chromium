@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<grit latest_public_release="0" current_release="1"
-      output_all_resource_defines="false" source_lang_id="en" enc_check="möl">
+<grit latest_public_release="0" current_release="1" output_all_resource_defines="false" source_lang_id="en" enc_check="möl">
   <outputs>
     <output filename="grit/components_strings.h" type="rc_header">
       <emit emit_type='prepend'></emit>
@@ -256,6 +255,8 @@
       <part file="translate_strings.grdp" />
       <part file="undo_strings.grdp" />
       <part file="version_ui_strings.grdp" />
+
+      <part file="hello_world_strings.grdp" />
 
       <if expr="not is_android and not is_ios">
         <part file="management_strings.grdp" />

@@ -169,6 +169,9 @@ extern const char kChromeUIWebFooterExperimentURL[];
 extern const char kChromeUIWelcomeHost[];
 extern const char kChromeUIWelcomeURL[];
 
+extern const char kLocalMediaPlayerHost[];
+extern const char kLocalMediaPlayerURL[];
+
 #if defined(OS_WIN)
 // TODO(crbug.com/1003960): Remove when issue is resolved.
 extern const char kChromeUIWelcomeWin10Host[];

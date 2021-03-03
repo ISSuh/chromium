@@ -1,0 +1,32 @@
+# Copyright 2015 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+static_library("local_media_player_ui") {
+  sources = [
+    "local_media_player_ui.cc",
+    "local_media_player_ui.h",
+  ]
+
+  deps = [
+    "//base",
+  ]
+}
+
+# source_set("unit_tests") {
+#   testonly = true
+#   sources = [
+#     "flags_state_unittest.cc",
+#   ]
+
+#   deps = [
+#     ":flags_ui",
+#     ":switches",
+#     "//base",
+#     "//base/test:test_support",
+#     "//components/prefs:test_support",
+#     "//components/strings",
+#     "//components/variations",
+#     "//testing/gtest",
+#   ]
+# }
