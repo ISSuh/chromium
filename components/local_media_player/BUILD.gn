@@ -6,10 +6,15 @@ static_library("local_media_player_ui") {
   sources = [
     "local_media_player_ui.cc",
     "local_media_player_ui.h",
+    "constants.h",
+    "constants.cc",
   ]
 
   deps = [
     "//base",
+    "//components/resources:components_resources",
+    "//ui/base",
+    "//ui/resources",
   ]
 }
 

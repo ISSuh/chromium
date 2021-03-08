@@ -1,8 +1,8 @@
-#include "components/hello_world/hello_world_ui.h"
+#include "components/local_media_player/local_media_player_ui.h"
 
 #include "components/grit/components_resources.h"
 #include "components/grit/components_scaled_resources.h"
-#include "components/hello_world/constants.h"
+#include "components/local_media_player/constants.h"
 #include "components/strings/grit/components_strings.h"
 #include "content/public/browser/browser_context.h"
 #include "content/public/browser/web_contents.h"
@@ -13,7 +13,7 @@ HelloWorldUI::HelloWorldUI(content::WebUI* web_ui)
     : content::WebUIController(web_ui) {
   // Set up the chrome://hello-world source.
   content::WebUIDataSource* html_source =
-      content::WebUIDataSource::Create(chrome::kChromeUIHelloWorldHost);
+      content::WebUIDataSource::Create(kChromeUIHelloWorldHost);
 
   // Localized strings.
   html_source->AddLocalizedString("helloWorldTitle", IDS_HELLO_WORLD_TITLE);

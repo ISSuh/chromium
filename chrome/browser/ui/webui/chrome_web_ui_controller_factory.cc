@@ -96,6 +96,7 @@
 #include "ui/web_dialogs/web_dialog_ui.h"
 #include "url/gurl.h"
 
+#include "components/local_media_player/constants.h"
 #include "components/local_media_player/local_media_player_ui.h"
 
 #if BUILDFLAG(ENABLE_NACL)
@@ -437,7 +438,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
   if (url.host_piece() == chrome::kChromeUIVersionHost)
     return &NewWebUI<VersionUI>;
 
-  if (url.host_piece() == chrome::kChromeUIHelloWorldHost)
+  if (url.host_piece() == kChromeUIHelloWorldHost)
     return &NewWebUI<HelloWorldUI>;
 
 #if !defined(OS_ANDROID)

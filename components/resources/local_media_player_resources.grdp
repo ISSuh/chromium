@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <grit-part>
-  <include name="IDR_HELLO_WORLD_HTML" file="../../components/hello_world/hello_world.html" type="BINDATA" />
-  <include name="IDR_HELLO_WORLD_CSS" file="../../components/hello_world/hello_world.css" type="BINDATA" />
-  <include name="IDR_HELLO_WORLD_JS" file="../../components/hello_world/hello_world.js" type="BINDATA" />
+  <include name="IDR_HELLO_WORLD_HTML" file="../../components/local_media_player/resources/local_media_player.html" type="BINDATA" />
+  <include name="IDR_HELLO_WORLD_CSS" file="../../components/local_media_player/resources/local_media_player.css" type="BINDATA" />
+  <include name="IDR_HELLO_WORLD_JS" file="../../components/local_media_player/resources/local_media_player.js" type="BINDATA" />
 </grit-part>

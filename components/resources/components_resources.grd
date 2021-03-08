@@ -26,6 +26,7 @@
       <part file="translate_resources.grdp" />
       <part file="user_actions_ui_resources.grdp" />
       <part file="version_ui_resources.grdp" />
+      <part file="local_media_player_resources.grdp" />
     </includes>
   </release>
 </grit>
